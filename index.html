@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube to MP4 Converter</title>
+</head>
+<body>
+  <h1>YouTube to MP4 Converter</h1>
+  <input type="text" id="youtubeURL" placeholder="Paste YouTube URL here"><br><br>
+  <button onclick="convert()">Convert</button>
+
+  <script>
+    function convert() {
+      const url = document.getElementById('youtubeURL').value;
+      window.location.href = `http://localhost:3000/download?url=${encodeURIComponent(url)}`;
+    }
+  </script>
+</body>
+</html>
